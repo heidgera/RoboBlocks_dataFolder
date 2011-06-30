@@ -2,11 +2,11 @@ global(){
 }
 
 setup(){
-	~pinMode(8,INPUT);
+	~pinMode(2,INPUT);
 }
 
 loop(){
-	while(digitalRead(8)){
+	while(digitalRead(2)){
 		$blockIn;
 	}
 }

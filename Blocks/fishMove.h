@@ -60,6 +60,6 @@ public:
 		move.write(closeAng+openAng*(open));
 	}
 	bool isOpen(){ return open; }
-} flipper(10,90,90), tail(9,90,90);
+} flipper(3,90,90), tail(4,90,90);
 
 #endif
