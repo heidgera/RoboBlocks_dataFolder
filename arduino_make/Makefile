@@ -58,7 +58,7 @@ UTIL_FOLDERS = $(foreach dir, $(ADD_LIBS_FOLDER),$(wildcard $(dir)/utility))
 UTIL_C = $(foreach dir,$(UTIL_FOLDERS),$(wildcard $(dir)/*.c))
 UTIL_CPP = $(foreach dir,$(UTIL_FOLDERS),$(wildcard $(dir)/*.c))
 
-BLOCK_INCS = -I$(BLOCK_DIR) -I$(dir $(wildcard $(BLOCK_DIR)/*))
+BLOCK_INCS = -I$(BLOCK_DIR)
 ADD_INCS = $(foreach dir,$(ADD_LIBS_FOLDER), -I$(dir))
 UTIL_INCS = $(foreach dir,$(UTIL_FOLDERS), -I$(dir))
 
@@ -101,8 +101,8 @@ CDEFS = -DF_CPU=$(F_CPU)L -DARDUINO=$(VERSION)
 CXXDEFS = -DF_CPU=$(F_CPU)L -DARDUINO=$(VERSION)
 
 # Place -I options here
-CINCS = -I$(ARDUINO) -I$(ADD_INCS) -I$(UTIL_INCS) -I$(BLOCK_INCS)
-CXXINCS = -I$(ARDUINO) -I$(ADD_INCS) -I$(UTIL_INCS) -I$(BLOCK_INCS)
+CINCS = -I$(ARDUINO) $(ADD_INCS) -I$(UTIL_INCS) $(BLOCK_INCS) 
+CXXINCS = -I$(ARDUINO) $(ADD_INCS) -I$(UTIL_INCS) $(BLOCK_INCS)
 
 # Compiler flag to set the C Standard level.
 # c89   - "ANSI" C

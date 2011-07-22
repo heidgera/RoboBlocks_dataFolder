@@ -1,0 +1,40 @@
+<blocks font="ArialNarrow.ttf" name="Arena Robot" subtitle="Make a path for the robot complete the maze." xmlns:blck="http://www.smm.org/">
+	<bar name="Manual blocks" color="0x993399">
+		<block name="go forward %d inches" color="0x993399">
+      <dropdown>
+          <ddlow>0</ddlow>
+          <ddhigh>10</ddhigh>
+          <ddsteps>6</ddsteps>
+      </dropdown>
+      <file>forward.blk</file>
+    </block>
+    <block name="step forward" color="0x993399">
+      <file>stepForward.blk</file>
+    </block>
+    <block name="go backward %d inches" color="0x993399">
+      <dropdown>
+          <ddlow>0</ddlow>
+          <ddhigh>10</ddhigh>
+          <ddsteps>6</ddsteps>
+      </dropdown>
+      <file>backward.blk</file>
+    </block>
+		<block name="turn right %d degrees" color="0x993399">
+      <dropdown>
+          <ddlow>0</ddlow>
+          <ddhigh>180</ddhigh>
+          <ddsteps>5</ddsteps>
+      </dropdown>
+      <file>rightTurn.blk</file>
+    </block>
+		<block name="turn left %d degrees" color="0x993399">
+      <dropdown>
+          <ddlow>0</ddlow>
+          <ddhigh>180</ddhigh>
+          <ddsteps>5</ddsteps>
+      </dropdown>
+      <file>leftTurn.blk</file>
+    </block>
+	</bar>
+</blocks>
+	

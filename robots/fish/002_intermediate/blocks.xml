@@ -1,7 +1,6 @@
 <blocks font="ArialNarrow.ttf" name="FishBot" subtitle="Intermediate: Stack your own instructions" xmlns:blck="http://www.smm.org/">
 	<bar name="Action blocks" color="0x993399">
 		<block name="move flipper %d" color="0x993399">
-      <type>p</type>
       <dropdown>
           <dds>LEFT</dds>
           <dds>RIGHT</dds>
@@ -10,16 +9,14 @@
       <file>flip.blk</file>
     </block>
 		<block name="move tail %d" color="0x993399">
-          <type>p</type>
-          <dropdown>
-              <dds>LEFT</dds>
-              <dds>RIGHT</dds>
-              <selected>LEFT</selected>
-          </dropdown>
-          <file>tail.blk</file>
-        </block>
+      <dropdown>
+          <dds>LEFT</dds>
+          <dds>RIGHT</dds>
+          <selected>LEFT</selected>
+      </dropdown>
+      <file>tail.blk</file>
+    </block>
 		<block name="wriggle speed %d">
-			<type>g</type>
 			<dropdown>
         <dds>STOP</dds>
         <dds>SLOW</dds>
@@ -47,11 +44,11 @@
 			<file>repeat.blk</file>
 		</block>
     <block name="wait %d seconds">
-			<type>d</type>
-            <dropdown>
-                <ddlow>0</ddlow>
-                <ddhigh>5</ddhigh>
-            </dropdown>
+      <dropdown>
+          <ddlow>0</ddlow>
+          <ddhigh>2</ddhigh>
+          <ddsteps>5</ddsteps>
+      </dropdown>
 			<file>delay.blk</file>
 		</block>
 	</bar>

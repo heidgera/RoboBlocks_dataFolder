@@ -1,49 +1,31 @@
 #include "WProgram.h"
 void setup();
 void loop();
-int wrigPin=11;
-bool wriggle=false;
-int wrigSpeed=0;
-String wrigString;
+#include "fishMove.h"
 
-
-
-
-#include <Wire.h>
-#include <sounds.h>
 
 bool thru=false;
 
 void setup(){
-	pinMode(wrigPin,OUTPUT);
-	pinMode(2,INPUT);
-	
-	Sound.setup();
+	flipper.setup();
+	flipper.setup();
 
 }
 
 void loop(){
-  
+    flipper.start();
+  flipper.start();
+
   if(!thru){
-    while(1){ 	wrigString="SLOW";
-	if(wrigString.equals("FAST")) wrigSpeed = 255;
-	else if(wrigString.equals("SLOW")) wrigSpeed = 120;
-	else wrigSpeed= 0;
-	
-	analogWrite(wrigPin,wrigSpeed); ;
-	if(digitalRead(2)){
-		wrigString="STOP";
-		if(wrigString.equals("FAST")) wrigSpeed = 255;
-		else if(wrigString.equals("SLOW")) wrigSpeed = 120;
-		else wrigSpeed= 0;
-		
-		analogWrite(wrigPin,wrigSpeed); ;
-		Sound.play(1); ;
-		delay(2 *1000);
-	}
+    for(int i=0; i<5; i++){	flipper.manual("LEFT");
+	delay(1 *1000);
+	flipper.manual("RIGHT");
+	delay(0.5 *1000);
 }
 
   }
+    
   
+
   thru=true;
 }
