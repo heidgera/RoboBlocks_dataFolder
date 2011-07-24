@@ -60,6 +60,22 @@
       <file>pathBlocked.blk</file>
       <action>if:!$front(4)</action>
     </block>
+    <block name="while path is blocked" color="0x336699">
+      <cond>1</cond>
+      <file>pathClear.blk</file>
+      <action>while:!$front(4)</action>
+    </block>
+    <block name="if path on left is clear" color="0x336699">
+      <cond>1</cond>
+      <file>pathClear.blk</file>
+      <action>while:$leftPath(4)</action>
+    </block>
+    <block name="if path on right is clear" color="0x336699">
+      <cond>1</cond>
+      <file>pathClear.blk</file>
+      <action>while:$rightPath(4)</action>
+    </block>
+
 	</bar>
   <bar name="Timing blocks" color="0xFF6600">
 		<block name="repeat %d times">
