@@ -40,11 +40,11 @@ TARGET = $(notdir $(CURDIR))
 INSTALL_DIR = ../../Arduino
 BLOCK_DIR = ../Blocks
 #PORT = /dev/tty.usbserial*
-UPLOAD_RATE = 57600
-AVRDUDE_PROGRAMMER = stk500v1
+UPLOAD_RATE = 115200
+AVRDUDE_PROGRAMMER = arduino
 #MCU = atmega168
 MCU = atmega328p
-F_CPU = 16000000
+F_CPU = 16000000L
 
 ############################################################################
 # Below here nothing should be changed...
@@ -101,8 +101,8 @@ CDEFS = -DF_CPU=$(F_CPU)L -DARDUINO=$(VERSION)
 CXXDEFS = -DF_CPU=$(F_CPU)L -DARDUINO=$(VERSION)
 
 # Place -I options here
-CINCS = -I$(ARDUINO) $(ADD_INCS) -I$(UTIL_INCS) $(BLOCK_INCS) 
-CXXINCS = -I$(ARDUINO) $(ADD_INCS) -I$(UTIL_INCS) $(BLOCK_INCS)
+CINCS = -I$(ARDUINO) $(ADD_INCS) $(UTIL_INCS) $(BLOCK_INCS) 
+CXXINCS = -I$(ARDUINO) $(ADD_INCS) $(UTIL_INCS) $(BLOCK_INCS)
 
 # Compiler flag to set the C Standard level.
 # c89   - "ANSI" C

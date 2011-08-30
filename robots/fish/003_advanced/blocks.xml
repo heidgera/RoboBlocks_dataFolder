@@ -30,6 +30,13 @@
       </dropdown>
 			<file>playSound.blk</file>
 		</block>
+    <block name="blink %d" color="0x993399">
+      <dropdown>
+          <dds>FAST</dds>
+          <dds>SLOW</dds>
+      </dropdown>
+      <file>blink.blk</file>
+    </block>
 	</bar>
 	<bar name="Timing blocks" color="0xFF6600">
 		<block name="for %d seconds">

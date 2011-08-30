@@ -8,7 +8,7 @@ class roboSense {
 protected:
   int frntSnsr;
   int leftSnsr;
-  int rghtSnsr;
+  //int rghtSnsr;
   signed int dirScore;
   bool lastRd[5];
   bool set[7];
@@ -16,8 +16,9 @@ protected:
 public:
   roboSense(){
     frntSnsr=0;
+    //frntRSnsr=1;
     leftSnsr=1;
-    rghtSnsr=2;
+    //rghtSnsr=3;
     dirScore=0;
     set[5]=set[6]=false;
     for (int i=0; i<5; i++) {
@@ -36,12 +37,15 @@ public:
   bool frontSensor(int num=800){
     return analogRead(frntSnsr)>num;
   }
+  /*bool frontRightSensor(int num=800){
+    return analogRead(frntRSnsr)>num;
+  }*/
   bool leftSensor(int num=800){
     return analogRead(leftSnsr)>num;
   }
-  bool rightSensor(int num=800){
+  /*bool rightSensor(int num=800){
     return analogRead(rghtSnsr)>num;
-  }
+  }*/
   void manageSet(bool newSet,bool & out, bool & num, bool & in){
     if(!out){
       if(newSet) num=in=true;
