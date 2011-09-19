@@ -6,10 +6,8 @@
           <ddhigh>10</ddhigh>
           <ddsteps>6</ddsteps>
       </dropdown>
+      <action>move:$dd[0].num()*$ppi</action>
       <file>forward.blk</file>
-    </block>
-    <block name="step forward" color="0x993399">
-      <file>stepForward.blk</file>
     </block>
     <block name="go backward %d inches" color="0x993399">
       <dropdown>
@@ -18,6 +16,7 @@
           <ddsteps>6</ddsteps>
       </dropdown>
       <file>backward.blk</file>
+      <action>move:-$dd[0].num()*$ppi</action>
     </block>
 		<block name="turn right %d degrees" color="0x993399">
       <dropdown>
@@ -25,6 +24,7 @@
           <ddhigh>180</ddhigh>
           <ddsteps>5</ddsteps>
       </dropdown>
+      <action>turn:$dd[0].num()</action>
       <file>rightTurn.blk</file>
     </block>
 		<block name="turn left %d degrees" color="0x993399">
@@ -33,6 +33,7 @@
           <ddhigh>180</ddhigh>
           <ddsteps>5</ddsteps>
       </dropdown>
+      <action>turn:-$dd[0].num()</action>
       <file>leftTurn.blk</file>
     </block>
 	</bar>

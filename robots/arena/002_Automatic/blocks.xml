@@ -57,7 +57,7 @@
 		<block name="while path in front is clear" color="0x336699">
       <cond>1</cond>
       <file>pathClear.blk</file>
-      <action>while:$front(2)</action>
+      <action>while:$front(4)</action>
     </block>
     <block name="if path on left is clear" color="0x336699">
       <cond>1</cond>
